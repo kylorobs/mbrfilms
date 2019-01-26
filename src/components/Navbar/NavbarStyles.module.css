@@ -1,0 +1,50 @@
+
+.container {
+  display: flex;
+  max-width: 100%;
+    background-color: black;
+  justify-content: space-between;
+    align-items: center;
+  height: 8em;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 2em;
+}
+
+
+.linksContainer ul li {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em;
+  color: white;
+  height: 100%;
+    font-size: 1.6em;
+  text-align: center;
+}
+
+.linksContainer ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.linksContainer ul li a:hover {
+  color: red;
+}
+
+.logoContainer {
+  width: 10em;
+  padding: 2em;
+}
+
+.logoContainer img {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}

@@ -3,5 +3,5 @@ import { Link, graphql } from 'gatsby'
 
 export default () => (
 
-  return {`<p> Portfolio </p>`}
+   `<p> Portfolio </p>`
 )
