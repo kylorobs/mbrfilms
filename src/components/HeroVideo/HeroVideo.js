@@ -1,15 +1,39 @@
 import React from 'react'
 import HeroVideoStyles from "./HeroVideoStyles.module.css"
-import HeroVideoFile from './HeroVideo.mp4'
 
-export default () => {
+export default class HeroVideo extends React.Component{
+  state = {
+    iframe: null,
+    screenWidth: null
+  }
+
+
+  componentDidMount(){
+
+    // let container = document.querySelectorAll('.heroVideo')[0];
+    let url=`https://vimeo.com/api/oembed.json?url=https://vimeo.com/100237575&api=false&loop=true&portrait=false&title=false&autoplay=true&byline=false`
+    fetch(url).then(res=> res.json()).then(results => {
+      let res = results.html;
+      console.log(res)
+      this.setState({iframe: res})
+    }).catch(err => console.log("Error fetching" + err))
+
+  }
+render(){
+
+let embed = this.state.iframe;
+
+// embed = embedArray.pop();
+// embed=embedArray.join('')
 
   return (
-    <div className={HeroVideoStyles.heroContainer}>
-      <video loop autoPlay className={HeroVideoStyles.heroVideo}>
-        <source src={HeroVideoFile} type="video/mp4"></source>
-      </video>
-    </div>
+    // <div className={HeroVideoStyles.heroVideoContainer}>
+      <div
+        className={HeroVideoStyles.heroVideoContainer}
+        dangerouslySetInnerHTML={{__html: embed}}>
+      </div>
+    // </div>
   )
 
+}
 }
