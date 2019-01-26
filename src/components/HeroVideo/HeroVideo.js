@@ -1,5 +1,6 @@
 import React from 'react'
 import HeroVideoStyles from "./HeroVideoStyles.module.css"
+import HeroVideo from './HeroVideo.mp4'
 
 export default class HeroVideo extends React.Component{
   state = {
@@ -21,17 +22,13 @@ export default class HeroVideo extends React.Component{
   }
 render(){
 
-let embed = this.state.iframe;
 
-// embed = embedArray.pop();
-// embed=embedArray.join('')
 
   return (
     <div className={HeroVideoStyles.heroContainer}>
-      <div
-        className={HeroVideoStyles.heroVideo}
-        dangerouslySetInnerHTML={{__html: embed}}>
-      </div>
+      <video autoplay muted loop id="heroVideo"<
+        <source src={HeroVideo}>
+      </video>
     </div>
   )
 
