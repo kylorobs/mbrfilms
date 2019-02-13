@@ -1,40 +1,43 @@
 import React from 'react'
 import VideoContainerStyles from "./VideoContainerStyles.module.css";
-import Player from '@vimeo/player';
-// import Vimeo from 'react-vimeo'
 import VimeoVideo from './VimeoVideo.js'
 
 export default (props) => {
 
-    // const options = {
-    // id: null,
-    // };
-    //
-    // let player = null;
-    // options.id = props.id;
-    //
-    //   let newVid = document.createElement('div');
-    //   newVid.classList.add('video-node')
-    //   newVid.setAttribute('id', props.key)
-    //   videos.appendChild(newVid)
-    //
-    //   player = new Player('EXPO', options);
-    //  return player;
-    //
-    //
-    // player.on('play', function() {
-    // console.log('played the video!');
-    // });
-    //
-    //
-    //
-    //   console.log("Let's see what is inside this video");
-    //   console.log("video")
-    // console.log(props.id)
-    let iframe = props.id
+  let iframe = props.id;
+
+
+  console.log("Strip Direction PROPS")
+  console.log(props.stripDirection)
+
+  let videoDirection;
+  let stripStyles = [VideoContainerStyles.strip];
+  let videoFlex = [VideoContainerStyles.flex]
+  switch (props.stripDirection){
+    case 'left' :
+      stripStyles.push(VideoContainerStyles.stripLeft)
+      videoFlex.push(VideoContainerStyles.videoRight)
+    break;
+    case 'right' :
+      stripStyles.push(VideoContainerStyles.stripRight)
+      videoFlex.push(VideoContainerStyles.videoLeft)
+    break;
+    default: console.log("switch error")
+  }
+
+  stripStyles = stripStyles.join(' ');
+  videoFlex = videoFlex.join(' ');
+
+  console.log("STRIP STYLESSSS");
+  console.log(stripStyles)
   return (
-    <div>
-    <VimeoVideo iframe={iframe} />
+    <div className = {VideoContainerStyles.content}>
+      <div className = {videoFlex}>
+        <div className = {VideoContainerStyles.container} >
+          <VimeoVideo iframe={iframe} />
+        </div>
+      </div>
+    <div className={stripStyles}></div>
     </div>
   )
 
