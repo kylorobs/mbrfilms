@@ -1,45 +1,53 @@
 import React from 'react'
-import VideosStyles from "./VideosStyles.module.css"
+import VideosStyles from "./VideosStyles.module.css";
+import VideoContainer from './VideoContainer/VideoContainer.js'
+
+
+
 
 export default class Videos extends React.Component{
+
   state = {
-    videos: [],
-    screenWidth: null
+    videos: ['<iframe src="https://player.vimeo.com/video/313563158" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>', '<iframe src="https://player.vimeo.com/video/315244339" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'],
   }
 
+  // componentDidMount(){
 
-  componentDidMount(){
+    // let allVideos = [...this.props.album];
+    // allVideos.map((video, i) => {
+    //   let keyName = `vid${i}`
+    //   return <VideoContainer id={video.node.id} direction='left' key={keyName}/>
+    // })
 
-    // let container = document.querySelectorAll('.heroVideo')[0];
-    let url=`https://vimeo.com/api/oembed.json?url=https://vimeo.com/100237575&api=false&loop=true&portrait=false&title=false&autoplay=true&byline=false`
-    fetch(url).then(res=> res.json()).then(results => {
 
-      results.map((video, i) => {
-        embed= video.html;
-        updatedVideos = [...this.state.videos];
-        updatedVideos.push(embed);
-        this.setState({videos: updatedVideos})
-      })
 
-    }).catch(err => console.log("Error fetching" + err))
+    // this.setState({
+    //   videos: allVideos
+    // })
 
-  }
+  // }
 
 render(){
+  console.log("and now the big moment");
+  console.log(this.props.album)
 
-let embeds = this.state.videos;
+  let allVideos = [...this.props.album];
+  console.log("ALL VIDEOS");
+  console.log(allVideos)
+  let videoComponents = allVideos.map((video, i) => {
+    let keyName = `vid${i}`
+    return <VideoContainer id={video.node.iframe} direction='left' key={keyName}/>
+  })
 
-// embed = embedArray.pop();
-// embed=embedArray.join('')
+  console.log("and Now AllVIDEOS is")
+  console.log(videoComponents)
 
   return (
     <div className={VideosStyles.container}>
-      <div
-        className={VideosStyles.videos}
-        dangerouslySetInnerHTML={{__html: embed}}>
+      <div id="videos">
+        {videoComponents}
       </div>
     </div>
   )
-
 }
 }
