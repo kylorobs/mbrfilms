@@ -4,14 +4,14 @@ const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.4,
   headerFontFamily: [
-    "Yrsa",
+    "Mukta",
     "Helvetica Neue",
     "Segoe UI",
     "Helvetica",
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ['Yrsa', 'serif'],
+  bodyFontFamily: ['Mukta', 'serif'],
 })
 
 export default typography
