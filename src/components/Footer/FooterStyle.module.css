@@ -1,0 +1,21 @@
+footer {
+  margin: 2em 0;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
+footer hr {
+  background-color: red;
+  height: 1px;
+}
+
+.madeby {
+  color: red;
+  font-size: 14px!important;
+  margin: 5px;
+  padding: 0;
+  text-align: right;
+}

@@ -1,0 +1,60 @@
+.stripGrid{
+  margin: 2em 0;
+  display: grid;
+  height: auto;
+  grid-template-columns: 20% 27.5% 5% 27.5% 20%;
+    grid-template-rows: 15em 2em auto;
+}
+
+
+.strip {
+  z-index: 1;
+  /* height:20em; */
+  grid-row: 1 / span 2;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid red;
+
+}
+
+.stripLeft {
+  grid-column: 1 / span 4;
+}
+
+.stripRight {
+  grid-column: 2 / span 4;
+}
+
+.stripTextRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  z-index: 60;
+}
+
+.stripTextLeft {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    z-index: 60;
+}
+
+.stripButtons {
+  display: flex;
+  justify-content: center;
+  grid-column: 4 / span 2;
+  z-index: 60;
+      grid-row: 1 / span 2;
+      height: auto;
+}

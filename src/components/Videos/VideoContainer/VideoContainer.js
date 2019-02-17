@@ -13,14 +13,17 @@ export default (props) => {
   let videoDirection;
   let stripStyles = [VideoContainerStyles.strip];
   let videoFlex = [VideoContainerStyles.flex]
+
   switch (props.stripDirection){
     case 'left' :
       stripStyles.push(VideoContainerStyles.stripLeft)
-      videoFlex.push(VideoContainerStyles.videoRight)
+      stripStyles.push(VideoContainerStyles.contentLeft)
+      videoFlex.push(VideoContainerStyles.contentRight)
     break;
     case 'right' :
       stripStyles.push(VideoContainerStyles.stripRight)
-      videoFlex.push(VideoContainerStyles.videoLeft)
+      stripStyles.push(VideoContainerStyles.contentRight)
+      videoFlex.push(VideoContainerStyles.contentLeft)
     break;
     default: console.log("switch error")
   }
@@ -37,7 +40,9 @@ export default (props) => {
           <VimeoVideo iframe={iframe} />
         </div>
       </div>
-    <div className={stripStyles}></div>
+    <div className={stripStyles}>
+      <h3> {props.title} </h3>
+    </div>
     </div>
   )
 

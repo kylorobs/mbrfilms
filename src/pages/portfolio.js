@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Container from '../components/Container/Container'
 import Navbar from '../components/Navbar/Navbar.js'
 import Videos from '../components/Videos/Videos.js'
+import Footer from '../components/Footer/Footer'
 
 export default ( { data }) => {
   console.log("data time")
@@ -12,6 +13,7 @@ export default ( { data }) => {
   <Container>
     <Navbar />
     <Videos album={data.allVimeoVideo.edges} />
+    <Footer />
   </Container>
 
 )}
