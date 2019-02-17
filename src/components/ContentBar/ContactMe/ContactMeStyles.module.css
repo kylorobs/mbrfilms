@@ -1,0 +1,25 @@
+
+.stripGrid {
+  display: grid;
+  margin-top: 2em;
+  height: auto;
+  grid-template-columns: 20% 27.5% 5% 27.5% 20%;
+  grid-template-rows: 15em 2em auto;
+}
+
+.videoGrid{
+  margin: 9em 0;
+  display: grid;
+  height: auto;
+  grid-template-columns: 20% 27.5% 5% 27.5% 20%;
+  grid-template-rows: 15em 2em auto;
+}
+
+
+.textCanvas {
+  height: auto;
+  width: 60%;
+  margin: auto;
+  color: black;
+  margin-top: 6em;
+}

@@ -8,16 +8,32 @@ const Navbar = () => {
  return   (
    <div className={NavbarStyles.container}>
      <div className={NavbarStyles.logoContainer}>
-      <img src={logo} />
+     <Link to="/"><img src={logo} /></Link>
      </div>
       <div className={NavbarStyles.linksContainer}>
         <ul>
+        <li> <Link
+          to="/showreel/"
+          activeStyle={{
+            color: "red",
+          }}
+        > SHOWREEL
+        </Link>
+        </li>
           <li> <Link
             to="/portfolio/"
             activeStyle={{
               color: "red",
             }}
-          > Portfolio
+          > PORTFOLIO
+          </Link>
+          </li>
+          <li>
+          <Link
+          to="/about/"
+          activeStyle={{
+            color: "red",
+          }}> ABOUT
           </Link>
           </li>
           <li>
@@ -25,7 +41,7 @@ const Navbar = () => {
             to="/contact/"
             activeStyle={{
               color: "red",
-            }}> Contact
+            }}> CONTACT
             </Link>
           </li>
         </ul>

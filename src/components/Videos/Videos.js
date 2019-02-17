@@ -1,45 +1,40 @@
 import React from 'react'
-import VideosStyles from "./VideosStyles.module.css"
+import VideosStyles from "./VideosStyles.module.css";
+// import VideoContainer from './VideoContainer/VideoContainer.js'
+import VidContainer from './VideoContainer/VidContainer.js'
+
+
+
 
 export default class Videos extends React.Component{
-  state = {
-    videos: [],
-    screenWidth: null
-  }
-
-
-  componentDidMount(){
-
-    // let container = document.querySelectorAll('.heroVideo')[0];
-    let url=`https://vimeo.com/api/oembed.json?url=https://vimeo.com/100237575&api=false&loop=true&portrait=false&title=false&autoplay=true&byline=false`
-    fetch(url).then(res=> res.json()).then(results => {
-
-      results.map((video, i) => {
-        embed= video.html;
-        updatedVideos = [...this.state.videos];
-        updatedVideos.push(embed);
-        this.setState({videos: updatedVideos})
-      })
-
-    }).catch(err => console.log("Error fetching" + err))
-
-  }
 
 render(){
+  console.log("and now the big moment");
+  console.log(this.props.album)
 
-let embeds = this.state.videos;
+  let allVideos = [...this.props.album];
+  console.log("ALL VIDEOS");
+  console.log(allVideos)
 
-// embed = embedArray.pop();
-// embed=embedArray.join('')
+  let stripDirection = 'left';
+
+  let videoComponents = allVideos.map((video, i) => {
+    let keyName = `vid${i}`
+    if (stripDirection === 'left') stripDirection = 'right';
+    else stripDirection = 'left'
+
+    return <VidContainer id={video.node.iframe} title={video.node.title} stripDirection={stripDirection} key={keyName}/>
+  })
+
+  console.log("and Now AllVIDEOS is")
+  console.log(videoComponents)
 
   return (
     <div className={VideosStyles.container}>
-      <div
-        className={VideosStyles.videos}
-        dangerouslySetInnerHTML={{__html: embed}}>
+      <div className={VideosStyles.canvas}>
+        {videoComponents}
       </div>
     </div>
   )
-
 }
 }
