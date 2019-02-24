@@ -6,7 +6,8 @@ import VimeoVideo from '../components/Videos/VideoContainer/VimeoVideo.js'
 import Strip from '../components/Strip/Strip'
 import StripOverlap from '../components/Strip/StripOverlap/StripOverlap'
 import ContactMeStyles from '../components/ContentBar/ContactMe/ContactMeStyles.module.css'
-import sunset from '../images/sunset.jpg'
+import road from '../images/road.jpg';
+import Button from "../components/Button/Button.js";
 
 export default () => {
   let iframe = `<iframe src="https://player.vimeo.com/video/316107296" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
@@ -16,10 +17,10 @@ return  (
       <VimeoVideo iframe={iframe} />
       <div className={ContactMeStyles.stripGrid}>
         <Strip image='true' direction='left'>
-        <h3>A few Links ></h3>
+          <Button to='/portfolio' > See my portfolio </Button>
         </Strip>
         <StripOverlap direction='right'>
-          <img src={sunset}></img>
+          <img src={road}></img>
         </StripOverlap>
       </div>
     </Container>
