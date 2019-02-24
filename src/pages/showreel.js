@@ -17,7 +17,7 @@ return  (
       <VimeoVideo iframe={iframe} />
       <div className={ContactMeStyles.stripGrid}>
         <Strip image='true' direction='left'>
-          <Button to='/portfolio' > See my portfolio </Button>
+          <Button to='/portfolio' > See portfolio </Button>
         </Strip>
         <StripOverlap direction='right'>
           <img src={road}></img>
