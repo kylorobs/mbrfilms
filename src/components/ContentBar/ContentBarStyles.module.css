@@ -8,6 +8,7 @@
       /* min-height: 55em; */
       grid-template-columns: 20% 27.5% 5% 27.5% 20%;
       grid-template-rows: 15em 3em 30em auto;
+      grid-auto-rows: auto;
 }
 
 .strip {
@@ -34,10 +35,11 @@
   grid-row: 1 / span 1;
   color: white;
   z-index: 10;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 1em 2em;
   /* text-align: center; */
   max-height: 11em;
+    line-height: 1.6em;
 }
 
 .stripText h3 {
@@ -69,7 +71,7 @@
 .panelContent{
    grid-column: 2 / span 2;
   grid-row: 4/ span 1;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .borderContent{
@@ -80,14 +82,38 @@
 }
 
 .borderContentBox{
-  margin: 0 2em;
+  margin: 2em 1em;
   display: flex;
   align-items: center;
-  padding: 1em;
-  font-size: 1.9em;
-  border: 5px solid black;
-  border-radius: 2em;
-  font-style: italic;
-  color: red;
+  padding: 3em 1em;
+  font-size: 1.1em;
+  /* border: 5px solid black; */
+  /* border-radius: 2em; */
+  /* font-style: italic; */
+  color: white;
+  line-height: 1.6em;
+  background-color: black;
+  margin-right: 0;
 
+}
+
+.imagesFlex {
+  display: flex;
+  position: block;
+  margin: 2em auto;
+  justify-content: space-between;
+  width: 100%;
+  grid-row: 5 / span 1;
+  grid-column: 2 / span 3;
+}
+
+.imageContainer {
+  width: 25em;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
 }

@@ -17,7 +17,10 @@ export default (props) => {
   return (
 
   <div className={ContactMeStyles.videoGrid}>
-    <Strip direction={stripD}><h3>{props.title}</h3></Strip>
+    <Strip direction={stripD}>
+    <h3>{props.title}</h3>
+    <h4 className={ContactMeStyles.videoDescription}> {props.description}</h4>
+    </Strip>
     <StripOverlap direction={stripO}>
         <VimeoVideo iframe={props.id} />
     </StripOverlap>

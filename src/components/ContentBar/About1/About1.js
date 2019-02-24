@@ -3,6 +3,8 @@ import ContentBar from "../ContentBar";
 import Strip from "../../Strip/Strip";
 import ContentBarStyles from "../ContentBarStyles.module.css";
 import profilePic from '../../../images/Pro-pic.jpg';
+import lighthouse from '../../../images/lighthouse.jpg';
+import faces from '../../../images/faces.jpg';
 
 export default (props) => {
 
@@ -30,6 +32,15 @@ export default (props) => {
             screen in a manner that both captivates and speaks truthfully.</p>
         </div>
       </div>
+      <div className= {ContentBarStyles.imagesFlex}>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={faces}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={lighthouse}></img>
+        </div>
+      </div>
+
     </ContentBar>
   )
 

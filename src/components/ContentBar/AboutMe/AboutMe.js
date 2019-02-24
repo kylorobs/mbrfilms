@@ -2,7 +2,7 @@ import React from 'react'
 import Strip from "../../Strip/Strip";
 import StripOverlap from "../../Strip/StripOverlap/StripOverlap";
 import ContactMeStyles from "../ContactMe/ContactMeStyles.module.css";
-import sunset from '../../../images/sunset.jpg';
+import sunset from '../../../images/sunsetBW.jpg';
 import Hocs from '../../hocs/hocs'
 
 

@@ -23,7 +23,7 @@ render(){
     if (stripDirection === 'left') stripDirection = 'right';
     else stripDirection = 'left'
 
-    return <VidContainer id={video.node.iframe} title={video.node.title} stripDirection={stripDirection} key={keyName}/>
+    return <VidContainer id={video.node.iframe} title={video.node.title} description={video.node.description} stripDirection={stripDirection} key={keyName}/>
   })
 
   console.log("and Now AllVIDEOS is")
@@ -31,6 +31,7 @@ render(){
 
   return (
     <div className={VideosStyles.container}>
+
       <div className={VideosStyles.canvas}>
         {videoComponents}
       </div>

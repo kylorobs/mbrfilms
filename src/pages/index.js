@@ -7,6 +7,7 @@ import About1 from '../components/ContentBar/About1/About1'
 import StripLinks from '../components/ContentBar/StripLinks/StripLinks'
 import Footer from '../components/Footer/Footer'
 
+
 export default () => (
   <Container className={ContainerStyles.container}>
     <Navbar />

@@ -1,5 +1,5 @@
 .stripGrid{
-  margin: 2em 0;
+
   display: grid;
   height: auto;
   grid-template-columns: 20% 27.5% 5% 27.5% 20%;

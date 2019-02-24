@@ -9,10 +9,24 @@ export default ( { data }) => {
   console.log("data time")
   console.log(data)
   // console.log(props)
+
+  let allVideos = data.allVimeoVideo.edges;
+  let no1 = allVideos.find(el => el.node.id === "305688968")
+  let no2 = allVideos.find(el => el.node.id === "283012239" )
+  let no3 = allVideos.find(el => el.node.id === "286317651")
+
+  no1.node.description = "A short film depicting this and that"
+  no2.node.description = "A short film depicting this and that"
+  no3.node.description = "A short film depicting this and that"
+  // let no4 = allVideos.find(el => el.node.id === )
+  // let no5 = allVideos.find(el => el.node.id === )
+  let album = [no1, no2, no3];
+
+
   return (
   <Container>
     <Navbar />
-    <Videos album={data.allVimeoVideo.edges} />
+    <Videos album={album} />
     <Footer />
   </Container>
 
