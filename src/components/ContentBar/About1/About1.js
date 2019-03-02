@@ -5,6 +5,13 @@ import ContentBarStyles from "../ContentBarStyles.module.css";
 import profilePic from '../../../images/Pro-pic.jpg';
 import lighthouse from '../../../images/lighthouse.jpg';
 import faces from '../../../images/faces.jpg';
+import interview1 from '../../../images/int1.jpg';
+import brushes from '../../../images/brushes.jpg';
+import landscape from '../../../images/landscape.jpg';
+import painting from '../../../images/painting.jpg';
+import sunset2 from '../../../images/sunset2.jpg';
+import huts from '../../../images/huts.jpg';
+import flower from '../../../images/flower.jpg';
 
 export default (props) => {
 
@@ -32,12 +39,39 @@ export default (props) => {
             screen in a manner that both captivates and speaks truthfully.</p>
         </div>
       </div>
-      <div className= {ContentBarStyles.imagesFlex}>
+      <div className= {ContentBarStyles.imagesFlex1}>
         <div className= {ContentBarStyles.imageContainer}>
           <img src={faces}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
           <img src={lighthouse}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={interview1}></img>
+        </div>
+      </div>
+
+      <div className= {ContentBarStyles.imagesFlex2}>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={brushes}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={painting}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={landscape}></img>
+        </div>
+      </div>
+
+      <div className= {ContentBarStyles.imagesFlex3}>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={huts}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={flower}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img src={sunset2}></img>
         </div>
       </div>
 

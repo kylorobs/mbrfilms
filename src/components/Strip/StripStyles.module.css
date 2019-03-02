@@ -1,5 +1,4 @@
 .stripGrid{
-
   display: grid;
   height: auto;
   grid-template-columns: 20% 27.5% 5% 27.5% 20%;
@@ -17,7 +16,6 @@
   justify-content: center;
   align-items: center;
   border-bottom: 4px solid red;
-
 }
 
 .stripLeft {
@@ -37,6 +35,7 @@
   grid-column: 4 / span 2;
   grid-row: 1 / span 2;
   z-index: 60;
+  margin-left: 4em;
 }
 
 .stripTextLeft {
@@ -57,4 +56,45 @@
   z-index: 60;
       grid-row: 1 / span 2;
       height: auto;
+}
+
+@media only screen and (max-width: 780px){
+  .stripGrid{
+    grid-template-columns: 5% 90% 5%;
+      grid-template-rows:8em auto;
+  }
+  .stripLeft {
+    grid-column: 1 / span 3;
+  }
+
+  .stripRight {
+    grid-column: 1 / span 3;
+  }
+
+  .stripTextRight {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+        margin-left: 0;
+        padding: 1em;
+  }
+
+  .stripTextLeft {
+    grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+      z-index: 60;
+      padding: 1em;
+  }
+
+  .stripButtons {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    height: auto;
+  }
+
+  .stripTextLeft h3, .stripTextRight h3 {
+    margin: 0;
+  }
+
+
+
 }

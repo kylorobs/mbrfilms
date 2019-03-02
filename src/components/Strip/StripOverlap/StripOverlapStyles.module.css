@@ -30,3 +30,20 @@
             transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 780px){
+  .overlap {
+    width: auto;
+    min-height: auto;
+  }
+
+  .right {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+  }
+
+  .left {
+    grid-column: 1 / span 3;
+          grid-row: 2 / span 1;
+  }
+}

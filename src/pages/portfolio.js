@@ -15,13 +15,13 @@ export default ( { data }) => {
   let no2 = allVideos.find(el => el.node.id === "283012239" )
   let no3 = allVideos.find(el => el.node.id === "286317651")
 
-  no1.node.description = "A short film depicting this and that"
-  no2.node.description = "A short film depicting this and that"
-  no3.node.description = "A short film depicting this and that"
+
+  no1.node.description = "A short documentary that encapsulates the artistic approach of Tanya Bonello, a mixed media artist."
+  no2.node.description = "Personal testimonies of the impact The Justice Desk has had on the people of Zambia, as they fight for the protection of human rights."
+  no3.node.description = "A craft brewer sets out to raise funds for his new business venture - a distillery in the Eastern Cape that produces a proudly South African tequila product."
   // let no4 = allVideos.find(el => el.node.id === )
   // let no5 = allVideos.find(el => el.node.id === )
   let album = [no1, no2, no3];
-
 
   return (
   <Container>

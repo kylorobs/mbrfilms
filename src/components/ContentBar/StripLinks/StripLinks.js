@@ -7,7 +7,7 @@ export default () => (
   <div className={StripStyles.stripGrid}>
     <Strip image='false' direction='right'>
       <Button to='/about'> About </Button>
-      <Button to = '/portfolio'> Portfolio </Button>
+      <Button to = '/showreel'> Showreel </Button>
     </Strip>
   </div>
 )
