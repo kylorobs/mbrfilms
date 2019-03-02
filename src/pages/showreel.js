@@ -20,7 +20,7 @@ return  (
           <Button to='/portfolio' > See portfolio </Button>
         </Strip>
         <StripOverlap direction='right'>
-          <img src={road}></img>
+          <img alt="Road" src={road}></img>
         </StripOverlap>
       </div>
     </Container>

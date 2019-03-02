@@ -25,7 +25,7 @@ export default () => (
         </div>
       </Strip>
       <StripOverlap direction='left'>
-        <img src={profilePic}></img>
+        <img alt="Matthew Robinson profile" src={profilePic}></img>
       </StripOverlap>
     </div>
     <div className={ContactMeStyles.stripGrid}>
@@ -39,7 +39,7 @@ export default () => (
         </div>
       </Strip>
       <StripOverlap direction='right'>
-        <img src={camPic}></img>
+        <img alt="Matthew Robinson film equipment" src={camPic}></img>
       </StripOverlap>
     </div>
     <div className={ContactMeStyles.stripGrid}>
@@ -53,7 +53,7 @@ export default () => (
         </div>
       </Strip>
       <StripOverlap direction='left'>
-        <img src={light}></img>
+        <img alt="beautiful light" src={light}></img>
       </StripOverlap>
     </div>
 

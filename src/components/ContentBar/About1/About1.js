@@ -25,7 +25,7 @@ export default (props) => {
           and catapults content to a wider audience.</p>
       </div>
       <div className={ContentBarStyles.stripImage}>
-        <img src={profilePic} />
+        <img alt="Matthew Robinson filmaker profile" src={profilePic} />
       </div>
       <div className={ContentBarStyles.panelImage}>
       </div>
@@ -41,37 +41,37 @@ export default (props) => {
       </div>
       <div className= {ContentBarStyles.imagesFlex1}>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={faces}></img>
+          <img alt="student faces" src={faces}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={lighthouse}></img>
+          <img alt="A lighthouse" src={lighthouse}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={interview1}></img>
+          <img alt="An interview profile shot" src={interview1}></img>
         </div>
       </div>
 
       <div className= {ContentBarStyles.imagesFlex2}>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={brushes}></img>
+          <img alt="Brushes filmed in the Tanya Bonello documenatry" src={brushes}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={painting}></img>
+          <img alt="children painting" src={painting}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={landscape}></img>
+          <img alt="Eastern Cape landscape" src={landscape}></img>
         </div>
       </div>
 
       <div className= {ContentBarStyles.imagesFlex3}>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={huts}></img>
+          <img alt="Beach huts" src={huts}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={flower}></img>
+          <img alt="Eastern Cape flower" src={flower}></img>
         </div>
         <div className= {ContentBarStyles.imageContainer}>
-          <img src={sunset2}></img>
+          <img alt="Eastern Cape sunset" src={sunset2}></img>
         </div>
       </div>
 

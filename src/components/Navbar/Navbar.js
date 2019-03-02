@@ -8,7 +8,7 @@ const Navbar = () => {
  return   (
    <div className={NavbarStyles.container}>
      <div className={NavbarStyles.logoContainer}>
-     <Link to="/"><img src={logo} /></Link>
+     <Link to="/"><img alt="mbrfilms logo" src={logo} /></Link>
      </div>
       <div className={NavbarStyles.linksContainer}>
         <ul>

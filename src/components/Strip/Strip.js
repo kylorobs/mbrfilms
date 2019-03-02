@@ -11,12 +11,8 @@ export default class Strip extends React.Component {
 
     let classes = [StripStyles.strip]
     let stripText;
-    let direction = this.props.direction;
     let stripImage = this.props.image;
 
-    let consoleThis = function(){
-      console.log("I AM CONSOLING YOU")
-    }
 
     if (stripImage === 'false'){
       stripText = StripStyles.stripButtons;

@@ -11,7 +11,7 @@ export default () => (
   <div className={ContactMeStyles.stripGrid}>
     <Strip image='true' direction='left'><h3>A bit of background on me...</h3></Strip>
     <StripOverlap direction='right'>
-      <img src={sunset}></img>
+      <img alt="Eastern Cape sunset shot" src={sunset}></img>
     </StripOverlap>
   </div>
     <div className={ContactMeStyles.textCanvas}>
