@@ -4,6 +4,7 @@
 
 .container {
   display: flex;
+  position: relative;
   max-width: 100%;
     background-color: black;
   justify-content: space-between;
@@ -57,4 +58,81 @@
   height: auto;
   overflow: hidden;
   margin: 0;
+}
+
+.burgerLinks {
+  display: flex;
+  justify-content: center;
+    z-index: 1000;
+    background-color: black;
+    position: fixed;
+    right: -1000px;
+    height: 100%;
+    top: 0;
+    width: 60%;
+    border-left: 3px solid red;
+    padding-top: 5em;
+    transition: right 2s ease-in-out;
+}
+
+.activeBurger {
+  right: 0;
+}
+
+.burgerLinks ul li{
+  list-style: none;
+}
+
+.burgerLinks ul li a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em;
+  color: white;
+  font-size: 1em;
+}
+
+/* MOBILE STYLING */
+
+.burger {
+  position: absolute;
+  width: 2em;
+  top: 5px;
+  right: 5px;
+  z-index: 10000;
+}
+
+.burgerContainer {
+  position: absolute;
+  right: 30px;
+  background-color: black;
+  z-index: 10000;
+}
+
+.burgerTop, .burgerMiddle, .burgerBottom {
+  height: 3px;
+  width: 39px;
+  background-color: white;
+  display: block;
+  margin: 0.4em 0;
+}
+
+
+
+@media only screen and (max-width: 780px){
+  .container {
+    height: 5em;
+  }
+
+  .burgerContainer {
+    display: block;
+  }
+
+  .linksContainer {
+    display: none;
+  }
+
+  .logoContainer {
+    width: 8em;
+    padding: 1em;
+  }
 }

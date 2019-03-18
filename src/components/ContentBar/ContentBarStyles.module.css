@@ -188,7 +188,7 @@
 
   .imagesFlex1, .imagesFlex2, .imagesFlex3 {
     margin: 0;
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
     flex-wrap: wrap;
   }
 

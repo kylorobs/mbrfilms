@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Matthew Robinson Film Portfolio`,
-    siteUrl: `https://www.gatsbyjs.org`,
-    description: `A portfolio of work`,
+    siteUrl: `mbrfilms.com`,
+    description: `A film production website for mbrFilms, run by filmmaker Matthew Robinson`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

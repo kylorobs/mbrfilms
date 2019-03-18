@@ -1,54 +1,44 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import MenuLinks from './MenuLinks/MenuLinks.js'
+import Burger from './Burger/Burger.js'
 import NavbarStyles from "./NavbarStyles.module.css"
 import logo from './logo.png'
 
-const Navbar = () => {
+class Navbar extends React.Component{
+
+  state = {
+    'activeMenu': false
+  }
+
+  toggleActiveMenu = () => {
+    this.state.activeMenu ? this.setState({'activeMenu': false}) : this.setState({'activeMenu': true});
+  }
+
+  render(){
+
+    let burgerClass= [NavbarStyles.burgerLinks]
+    if (this.state.activeMenu){
+      burgerClass.push(NavbarStyles.activeBurger);
+      console.log("Before join")
+      console.log(burgerClass)
+    }
+    console.log("BURGER CLASS")
+    console.log(burgerClass)
+    burgerClass = burgerClass.join(' ')
+
 
  return   (
    <div className={NavbarStyles.container}>
      <div className={NavbarStyles.logoContainer}>
      <Link to="/"><img alt="mbrfilms logo" src={logo} /></Link>
      </div>
-      <div className={NavbarStyles.linksContainer}>
-        <ul>
-        <li> <Link
-          to="/showreel/"
-          activeStyle={{
-            color: "red",
-          }}
-        > SHOWREEL
-        </Link>
-        </li>
-          <li> <Link
-            to="/portfolio/"
-            activeStyle={{
-              color: "red",
-            }}
-          > PORTFOLIO
-          </Link>
-          </li>
-          <li>
-          <Link
-          to="/about/"
-          activeStyle={{
-            color: "red",
-          }}> ABOUT
-          </Link>
-          </li>
-          <li>
-            <Link
-            to="/contact/"
-            activeStyle={{
-              color: "red",
-            }}> CONTACT
-            </Link>
-          </li>
-        </ul>
-     </div>
+     <MenuLinks class={NavbarStyles.linksContainer} />
+     <MenuLinks class={burgerClass} />
+     <Burger onClick={this.toggleActiveMenu} />
    </div>
     )
-
   }
+}
 
   export default Navbar
