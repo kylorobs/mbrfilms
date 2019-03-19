@@ -21,6 +21,10 @@ export default class HeroVideo extends React.Component{
 
     const player = new Player('hero', options);
 
+    player.on('bufferend', function(){
+      document.getElementById('heroLoader').style.display="none";
+    });
+
     player.on('play', function() {
     console.log('played the video!');
     });
@@ -31,7 +35,11 @@ render(){
 
 
   return (
-      <div id="hero" className={HeroVideoStyles.heroVideoContainer}></div>
+      <div id="hero" className={HeroVideoStyles.heroVideoContainer}>
+        <div id="heroLoader" className ={HeroVideoStyles.heroVideoLoader}>
+          <div className ={HeroVideoStyles.loader}> Loading ...</div>
+        </div>
+      </div>
   )
 
 }

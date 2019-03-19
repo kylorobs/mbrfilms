@@ -93,8 +93,11 @@
 
   .stripTextLeft h3, .stripTextRight h3 {
     margin: 0;
+    text-align: center;
   }
 
-
+   .strip {
+     border-bottom: none;
+   }
 
 }

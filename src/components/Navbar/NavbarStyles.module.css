@@ -66,13 +66,13 @@
     z-index: 1000;
     background-color: black;
     position: fixed;
-    right: -1000px;
+    right: -60%;
     height: 100%;
     top: 0;
     width: 60%;
     border-left: 3px solid red;
     padding-top: 5em;
-    transition: right 2s ease-in-out;
+    transition: right 1.5s ease-in-out;
 }
 
 .activeBurger {
@@ -102,6 +102,7 @@
 }
 
 .burgerContainer {
+  display: none;
   position: absolute;
   right: 30px;
   background-color: black;
