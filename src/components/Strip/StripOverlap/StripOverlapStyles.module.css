@@ -31,7 +31,32 @@
   }
 }
 
-@media only screen and (max-width: 780px){
+@media only screen and (min-width: 1100px) and (max-width: 1300px){
+  .overlap{
+    width: 30em;
+  }
+
+  .videoDescription{
+    width: 20em;
+  }
+}
+
+
+
+@media only screen and (min-width: 900px) and (max-width: 1100px){
+  .overlap{
+    width: 25em;
+  }
+
+  .videoDescription{
+    width: 15em;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 900px){
   .overlap {
     width: auto;
     min-height: auto;

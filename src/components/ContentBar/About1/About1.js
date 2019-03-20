@@ -12,6 +12,9 @@ import painting from '../../../images/painting.jpg';
 import sunset2 from '../../../images/sunset2.jpg';
 import huts from '../../../images/huts.jpg';
 import flower from '../../../images/flower.jpg';
+import profile3 from '../../../images/profile3.jpg';
+import drawing from '../../../images/drawing.jpg';
+import smile from '../../../images/smile.jpg';
 
 export default (props) => {
 
@@ -72,6 +75,18 @@ export default (props) => {
         </div>
         <div className= {ContentBarStyles.imageContainer}>
           <img alt="Eastern Cape sunset" src={sunset2}></img>
+        </div>
+      </div>
+
+      <div className= {ContentBarStyles.imagesFlex4}>
+      <div className= {ContentBarStyles.imageContainer}>
+        <img alt="Profile image" src={profile3}></img>
+      </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img alt="Drawing" src={drawing}></img>
+        </div>
+        <div className= {ContentBarStyles.imageContainer}>
+          <img alt="Man smiles" src={smile}></img>
         </div>
       </div>
 

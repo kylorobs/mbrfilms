@@ -28,12 +28,12 @@
 }
 
 .stripText{
-  grid-column: 2 / span 1;
+  grid-column: 1 / span 2;
   grid-row: 1 / span 1;
   color: white;
   z-index: 10;
   font-size: 1.1em;
-  padding: 1em 2em;
+  padding: 2em 3em;
   /* text-align: center; */
   max-height: 11em;
     line-height: 1.6em;
@@ -110,12 +110,21 @@
 .imagesFlex3 {
   display: flex;
   position: block;
-  margin: 1em auto;
-  margin-top: 0;
+  margin: 0 auto;
   justify-content: flex-start;
   width: 100%;
   grid-row: 7 / span 1;
     grid-column: 2 / span 4;
+}
+
+.imagesFlex4 {
+  display: flex;
+  position: block;
+  margin-top: 0;
+  justify-content: flex-end;
+  width: 100%;
+  grid-row: 8 / span 1;
+    grid-column: 1 / span 4;
 }
 
 .imageContainer {
@@ -132,6 +141,19 @@
   height: auto;
   overflow: hidden;
   display: block;
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1050px){
+    .imageContainer {
+      width: 15em;
+      flex-wrap: wrap;
+      margin-right: 0;
+    }
+
+    .grid {
+      grid-template-rows: 18em 3em 30em auto;
+}
+
 }
 
 
@@ -164,6 +186,7 @@
   .stripImage{
      grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    justify-self: center;
     height:auto;
   }
 
@@ -191,7 +214,7 @@
   }
 
 
-  .imagesFlex1, .imagesFlex2, .imagesFlex3 {
+  .imagesFlex1, .imagesFlex2, .imagesFlex3, .imagesFlex4 {
     margin: 0;
     grid-column: 1 / span 5;
     flex-wrap: wrap;
