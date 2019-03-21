@@ -65,10 +65,12 @@
   .right {
       grid-column: 1 / span 3;
       grid-row: 2 / span 1;
+      justify-self: center;
   }
 
   .left {
     grid-column: 1 / span 3;
           grid-row: 2 / span 1;
+      justify-self: center;
   }
 }
