@@ -58,7 +58,7 @@
 
 @media only screen and (max-width: 900px){
   .overlap {
-    width: auto;
+      width: 100%;
     min-height: auto;
   }
 
@@ -66,13 +66,13 @@
       grid-column: 1 / span 3;
       grid-row: 2 / span 1;
       justify-self: center;
-      width: 100%;
+
   }
 
   .left {
     grid-column: 1 / span 3;
           grid-row: 2 / span 1;
       justify-self: center;
-      width: 100%;
+
   }
 }
