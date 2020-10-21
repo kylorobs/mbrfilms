@@ -58,8 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-source-vimeo`,
       options: {
-        clientID: 'dc0294040cc7c993aa8dfdcbe0d43ad512b7d35a',
-        clientSecret: 'xEdsJkB1aCNwW0ltXpos1BeDxz1GDmL2mz7rpDy2DmRlUDgQaDL6T4Cj41yoIRILgP4L8WqtXF0A+SuP4o5BC8e309meFtp5NjJomQz9nfg0uzvvDua90g/BdmVtngfo',
+        clientID: '',
+        clientSecret: '',
         userID: '46445224',
         searchQuery: '(featured on mbrfilms.com)',
         transformer (video) {
